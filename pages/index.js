@@ -25,27 +25,29 @@ export default function Index() {
     <div>
         <TitleSection />
         <Container>
-            <Box display={'flex'} justifyContent={'flex-end'} p={2}>
-                <IconButton sx={{ ml: 1 }} color="inherit" data-aos="fade-left" data-aos-duration="500">
+            <Box display={'flex'} justifyContent={'flex-end'} p={2} data-aos="fade-left" data-aos-duration="1500">
+                <IconButton sx={{ ml: 1 }} color="inherit">
                     <GitHubIcon onClick={()=>{}} color={'#000'} />
                 </IconButton>
-                <IconButton sx={{ ml: 1 }} color="inherit" data-aos="fade-left" data-aos-duration="700">
+                <IconButton sx={{ ml: 1 }} color="inherit">
                     <LinkedInIcon onClick={()=>{}} color={'#000'} />
                 </IconButton>
-                <IconButton sx={{ ml: 1 }} color="inherit" data-aos="fade-left" data-aos-duration="900">
+                <IconButton sx={{ ml: 1 }} color="inherit">
                     <YouTubeIcon onClick={()=>{}} color={'#000'} />
                 </IconButton>
-                <IconButton sx={{ ml: 1 }} color="inherit" data-aos="fade-left" data-aos-duration="1100">
+                <IconButton sx={{ ml: 1 }} color="inherit">
                     <InstagramIcon onClick={()=>{}} color={'#000'} />
                 </IconButton>
-                <IconButton sx={{ ml: 1 }} color="inherit" data-aos="fade-left" data-aos-duration="1300">
+                <IconButton sx={{ ml: 1 }} color="inherit">
                     <GoogleIcon onClick={()=>{}} color={'#000'} />
                 </IconButton>
-                <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit" data-aos="fade-left" data-aos-duration="1500">
+                <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
                     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                 </IconButton>
             </Box>
-
+            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
         </Container>
       <Box sx={{ my: 4 }}>
 
