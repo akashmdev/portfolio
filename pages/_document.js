@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 
 export default class MyDocument extends Document {
@@ -14,7 +13,7 @@ export default class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com" rel="preconnect" />
                     <link crossOrigin="true" href="https://fonts.gstatic.com" rel="preconnect" />
                     <link
-                        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cinzel:wght@400;500;600;700;800;900&display=swap"
+                        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap"
                         rel="stylesheet"
                     />
                     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -92,6 +91,7 @@ MyDocument.getInitialProps = async (ctx) => {
     const emotionStyles = extractCriticalToChunks(initialProps.html);
     const emotionStyleTags = emotionStyles.styles.map((style) => (
         <style
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: style.css }}
             data-emotion={`${style.key} ${style.ids.join(' ')}`}
             // eslint-disable-next-line react/no-danger

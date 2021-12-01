@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';import TitleSection from '../src/HomePage/TitleSection';
+import Container from '@mui/material/Container';
+import TitleSection from '../src/HomePage/TitleSection';
 import LinkSection from '../src/HomePage/LinkSection';
 import AboutSection from '../src/HomePage/AboutSection';
 import SkillSection from '../src/HomePage/SkillSection';
@@ -13,7 +14,7 @@ export default function Index() {
                 <LinkSection />
                 <AboutSection />
                 <SkillSection />
-                {/*<Projects />*/}
+                <Projects />
             </Container>
         </div>
     );
